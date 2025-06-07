@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andersbergs Pizzeria</title>
+    <link rel="icon" href="bilder/logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <img onclick="scrollToSection('heroContent')" style="cursor: pointer;" src="bilder/logo.png" alt="Slice Haven Logo" class="header-logo">
+
+    </header>
+
+    <section class="hero">
+        <div class="logo-overlay" id="logoOverlay">
+          
+        </div>
+        <div class="hero-content" id="heroContent" >
+            <img src="bilder/logo.png" style="border-radius: 50%; max-width: 661px; width: 80vw; "  alt="logo">
+            <h2>Crave the Perfect Pizza?</h2>
+            <p>Handcrafted with love, baked to perfection!</p>
+            <button class="cta-button" onclick="scrollToMenu()">See menu</button> <br> <br>
+            <button class="cta-button2" onclick="scrollToSection('about')">Kontakt</button>
+        </div>
+    </section>
+
+
+
+
+
+     <section class="menu" id="menu">
+        <h2>Our Menu</h2>
+
+ <div class="menunav">
+            <button onclick="scrollToSection('pizza')">Pizza</button>
+            <button onclick="scrollToSection('pasta')">Pasta</button>
+            <button onclick="scrollToSection('kebab')">Kebab</button>
+        </div>
+
+        <h2 id="pizza">Pizza</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>Funghi Fresco</h3>
+                <p>Fresh mushrooms, mozzarella, truffle oil, and arugula.</p>
+                <h4>120kr</h4>
+            </div>
+            <div class="menu-item">
+                <h3>Calzone Classico</h3>
+                <p>Folded pizza with ricotta, ham, mozzarella, and tomato sauce.</p>
+                <h4>130kr</h4>
+            </div>
+            <div class="menu-item">
+                <h3>Spicy Vesuvio</h3>
+                <p>Spicy salami, jalapeños, mozzarella, and tomato sauce.</p>
+                <h4>115kr</h4>
+            </div>
+            <div class="menu-item">
+                <h3>Bianca Verde</h3>
+                <p>White base, spinach, gorgonzola, and pine nuts.</p>
+                <h4>125kr</h4>
+            </div>
+            <div class="menu-item">
+                <h3>Frutti di Mare</h3>
+                <p>Seafood mix, garlic, parsley, and tomato sauce.</p>
+                <h4>140kr</h4>
+            </div>
+            <div class="menu-item">
+                <h3>Rustica</h3>
+                <p>Sausage, roasted peppers, olives, and mozzarella.</p>
+                <h4>110kr</h4>
+            </div><div class="menu-item">
+                <h3>Funghi Fresco</h3>
+                <p>Fresh mushrooms, mozzarella, truffle oil, and arugula.</p>
+                <h4>120kr</h4>
+            </div>
+            <div class="menu-item">
+                <h3>Calzone Classico</h3>
+                <p>Folded pizza with ricotta, ham, mozzarella, and tomato sauce.</p>
+                <h4>130kr</h4>
+            </div>
+            <div class="menu-item">
+                <h3>Spicy Vesuvio</h3>
+                <p>Spicy salami, jalapeños, mozzarella, and tomato sauce.</p>
+                <h4>115kr</h4>
+            </div>
+            <div class="menu-item">
+                <h3>Bianca Verde</h3>
+                <p>White base, spinach, gorgonzola, and pine nuts.</p>
+                <h4>125kr</h4>
+            </div>
+       </div>
+            <h2 id="pasta" class="menuheader">Pasta</h2>
+         <div class="menu-grid">
+            <div class="menu-item">
+                <h3>Frutti di Mare</h3>
+                <p>Seafood mix, garlic, parsley, and tomato sauce.</p>
+                <h4>140kr</h4>
+            </div>
+            <div class="menu-item">
+                <h3>Rustica</h3>
+                <p>Sausage, roasted peppers, olives, and mozzarella.</p>
+                <h4>110kr</h4>
+            </div><div class="menu-item">
+                <h3>Funghi Fresco</h3>
+                <p>Fresh mushrooms, mozzarella, truffle oil, and arugula.</p>
+                <h4>120kr</h4>
+            </div>
+            <div class="menu-item">
+                <h3>Calzone Classico</h3>
+                <p>Folded pizza with ricotta, ham, mozzarella, and tomato sauce.</p>
+                <h4>130kr</h4>
+            </div>
+            <div class="menu-item">
+                <h3>Spicy Vesuvio</h3>
+                <p>Spicy salami, jalapeños, mozzarella, and tomato sauce.</p>
+                <h4>115kr</h4>
+            </div>
+            <div class="menu-item">
+                <h3>Bianca Verde</h3>
+                <p>White base, spinach, gorgonzola, and pine nuts.</p>
+                <h4>125kr</h4>
+            </div>
+            <div class="menu-item">
+                <h3>Frutti di Mare</h3>
+                <p>Seafood mix, garlic, parsley, and tomato sauce.</p>
+                <h4>140kr</h4>
+            </div>
+            <div class="menu-item">
+                <h3>Rustica</h3>
+                <p>Sausage, roasted peppers, olives, and mozzarella.</p>
+                <h4>110kr</h4>
+            </div>
+        </div>
+
+             </div>
+            <h2 id="kebab" class="menuheader">Kebab</h2>
+         <div class="menu-grid">
+
+                   <div class="menu-item">
+                <h3>Bianca Verde</h3>
+                <p>White base, spinach, gorgonzola, and pine nuts.</p>
+                <h4>125kr</h4>
+            </div>
+            <div class="menu-item">
+                <h3>Frutti di Mare</h3>
+                <p>Seafood mix, garlic, parsley, and tomato sauce.</p>
+                <h4>140kr</h4>
+            </div>
+            <div class="menu-item">
+                <h3>Rustica</h3>
+                <p>Sausage, roasted peppers, olives, and mozzarella.</p>
+                <h4>110kr</h4>
+            </div>
+        </div>
+
+    </section>
+
+
+    
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <p>Welcome to Andersbergs Pizzeria, where passion for pizza meets tradition. Since 2010, we've been serving handcrafted pizzas made with the freshest ingredients, inspired by authentic Italian recipes.</p>
+            <h3>Location</h3>
+            <p>123 Pizza Lane, Food City, FC 12345</p>
+            <h3>Opening Hours</h3>
+            <ul>
+                <li>Monday - Friday: 11:00 AM - 10:00 PM</li>
+                <li>Saturday: 12:00 PM - 11:00 PM</li>
+                <li>Sunday: 12:00 PM - 9:00 PM</li>
+            </ul>
+            <h3>Contact</h3>
+            <div class="contact-info">
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@andersbergspizzeria.com</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer>
+        <p>© 2025 Andersbergs Pizzeria. All rights reserved.</p>
+    </footer>
+
+    </body>
+</html>
+

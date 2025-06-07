@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Comic Sans MS',  sans-serif; /* Playful font for pizza theme */
+}
+
+body {
+  background-color: #FFFFFF; /* White background to match logo's background */
+  color: #000000; /* Black text for contrast, matching logo text */
+}
+
+header {
+  background-color: #D4A017; /* Golden yellow from pizza crust */
+  color: #000000;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-logo {
+  width: 150px;
+  height: auto;
+}
+
+.hero {
+  background-image: url("https://images.unsplash.com/photo-1513104890138-7c749659a680?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-top: 80px;
+  position: relative;
+}
+
+.hero-content {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.hero-content.visible {
+  opacity: 1;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #D4A017; /* Golden yellow for emphasis */
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #000000;
+}
+
+.cta-button {
+  background-color: #D4A017; /* Golden yellow button */
+  color: #000000;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button2 {
+  background-color: transparent;
+  border: 2px solid #D4A017;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  color: #D4A017;
+}
+
+.cta-button2:hover {
+  opacity: 0.5;
+  background-color: #D4A017;
+  color: #000000;
+}
+
+.cta-button:hover {
+  background-color: #B88C14; /* Slightly darker golden yellow on hover */
+}
+
+.menu {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.menu h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #D4A017;
+}
+
+.menuheader {
+  margin: 25px 0;
+  font-size: 2.5rem;
+  color: #D4A017;
+}
+
+.menunav {
+  position: sticky;
+  top: 190px;
+  background-color: #D4A017;
+  margin-top: 150px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 900;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+     
+}
+
+.menunav button {
+  background-color: #FFFFFF;
+  color: #D4A017;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.menunav button:hover {
+  background-color: #D4A017;
+  color: #FFFFFF;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.menu-item {
+  background-color: #FFFFFF;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.menu-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #D4A017;
+}
+
+.menu-item h4 {
+  color: #D4A017;
+}
+
+.menu-item p {
+  font-size: 1rem;
+  color: #000000;
+}
+
+#aboutus {
+  margin-top: 50px;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #D4A017;
+  text-align: center;
+}
+
+.about {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #D4A017;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #000000;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #D4A017;
+}
+
+.about-content ul {
+  list-style: none;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  display: inline-block;
+}
+
+.about-content ul li {
+  margin-bottom: 0.5rem;
+}
+
+.contact-info {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  color: #000000;
+}
+
+footer {
+  background-color: #000000; /* Black footer to match logo text */
+  color: #FFFFFF;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .header-logo {
+    width: 120px;
+  }
+
+  .menunav {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    top: 160px;
+  }
+
+  .menunav button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .contact form {
+    max-width: 100%;
+  }
+
+  .about-content {
+    max-width: 100%;
+  }
+}

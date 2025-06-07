@@ -1,0 +1,102 @@
+  .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(74, 23, 40, 0.95);
+            backdrop-filter: blur(15px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+            border-bottom: 2px solid var(--flame-gold);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-family: "Cinzel", serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--flame-gold);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            letter-spacing: 1px;
+        }
+
+      
+
+        @keyframes flicker {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.7; }
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--warm-white);
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid transparent;
+        }
+
+        .nav-menu a:hover {
+            color: var(--flame-gold);
+            background: rgba(212, 175, 55, 0.1);
+            border-color: var(--flame-gold);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: 2px solid var(--flame-gold);
+            font-size: 1.5rem;
+            color: var(--flame-gold);
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-btn:hover {
+            background: var(--flame-gold);
+            color: var(--dark-burgundy);
+        }
+
+        .dropdown-menu {
+            background: var(--dark-burgundy);
+            border: 2px solid var(--flame-gold);
+        }
+
+        .dropdown-menu a {
+            color: var(--warm-white);
+        }
+
+        .dropdown-menu > a > li > button {
+            color: var(--flame-gold);
+            font-weight: 600;
+            font-size: 1rem;
+            background: none;
+            border: none;
+        }

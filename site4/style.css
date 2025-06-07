@@ -1,0 +1,373 @@
+ :root {
+            --flame-gold: #D4AF37;
+            --deep-gold: #B8860B;
+            --burnt-orange: #CC7722;
+            --dark-burgundy: #4A1728;
+            --rich-maroon: #5D1A33;
+            --cream: #FFF8DC;
+            --warm-white: #FFFEF7;
+            --bronze: #CD7F32;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Cormorant Garamond", serif;
+            line-height: 1.6;
+            color: var(--warm-white);
+            background: linear-gradient(135deg, var(--dark-burgundy), var(--rich-maroon));
+            min-height: 100vh;
+        }
+
+      
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(74, 23, 40, 0.7), rgba(93, 26, 51, 0.7)), 
+                        url('https://images.presentationgo.com/2025/04/pepperoni-pizza-closeup.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, transparent 30%, var(--dark-burgundy) 70%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 0 1rem;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-family: "Cinzel", serif;
+            font-size: 4.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: var(--flame-gold);
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            color: var(--cream);
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .mybtn {
+            padding: 1.2rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: "Cinzel", serif;
+        }
+
+        .mybtn-primary {
+            background: linear-gradient(45deg, var(--flame-gold), var(--deep-gold));
+            color: var(--dark-burgundy);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .mybtn-secondary {
+            background: transparent;
+            color: var(--flame-gold);
+            border: 2px solid var(--flame-gold);
+        }
+
+        .mybtn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 35px rgba(212, 175, 55, 0.5);
+        }
+
+        .mybtn-secondary:hover {
+            background: var(--flame-gold);
+            color: var(--dark-burgundy);
+        }
+
+        /* Menu Section */
+        .menu-categories {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--rich-maroon), var(--dark-burgundy));
+            position: relative;
+        }
+
+        .menu-categories::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: "Cinzel", serif;
+            font-size: 3.5rem;
+            color: var(--flame-gold);
+            margin-bottom: 3rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .menu-button-container {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .italian-menu-btn {
+            display: inline-block;
+            padding: 1.5rem 4rem;
+            background: linear-gradient(45deg, var(--flame-gold), var(--bronze), var(--deep-gold));
+            color: var(--dark-burgundy);
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            font-family: "Cinzel", serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            border: 3px solid var(--bronze);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+        }
+
+        .italian-menu-btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s;
+        }
+
+        .italian-menu-btn:hover::before {
+            left: 100%;
+        }
+
+        .italian-menu-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.6);
+            background: linear-gradient(45deg, var(--bronze), var(--flame-gold), var(--deep-gold));
+        }
+
+        .italian-menu-btn::after {
+            content: "🍕";
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .italian-menu-btn:hover::after {
+            transform: translateY(-50%) rotate(360deg);
+        }
+
+        /* About Section */
+        .pizza-hero {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--dark-burgundy), var(--rich-maroon));
+            color: var(--warm-white);
+            text-align: center;
+            position: relative;
+        }
+
+        .pizza-hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 30% 70%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(204, 119, 34, 0.05) 0%, transparent 50%);
+        }
+
+        .pizza-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .pizza-hero h1 {
+            font-family: "Cinzel", serif;
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+            color: var(--flame-gold);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .pizza-hero p {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            color: var(--cream);
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .kontakt-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .kontakt-info {
+            display: contents;
+        }
+
+        .kontakt-sektion {
+            background: rgba(212, 175, 55, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid var(--flame-gold);
+            transition: all 0.3s ease;
+        }
+
+        .kontakt-sektion:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+            background: rgba(212, 175, 55, 0.15);
+        }
+
+        .kontakt-sektion h3 {
+            font-family: "Cinzel", serif;
+            color: var(--flame-gold);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .kontakt-sektion p {
+            color: var(--cream);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+       
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .pizza-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .kontakt-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+          
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .mybtn {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+
+            .italian-menu-btn {
+                padding: 1.2rem 2.5rem;
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Vintage decorative elements */
+        .decorative-flame {
+            display: inline-block;
+            color: var(--flame-gold);
+            font-size: 1.5rem;
+            margin: 0 1rem;
+            animation: flicker 1.5s infinite alternate;
+        }
+
+    

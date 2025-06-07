@@ -1,0 +1,396 @@
+:root {
+    --golden-yellow: #D4A017; /* From pizza crust */
+    --skyline-black: #000000; /* From skyline silhouette */
+    --off-white: #F5F5F5; /* Softer white for contrast */
+    --pizza-crust: #E6B800; /* Slightly lighter crust shade for accents */
+    --dark-shadow: rgba(0, 0, 0, 0.5); /* For shadows */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Georgia", serif; /* Elegant font to match logo */
+    line-height: 1.6;
+    color: var(--skyline-black);
+    background: var(--off-white);
+}
+
+/* Hero Banner */
+.menu-hero {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.menu-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, transparent 30%, var(--skyline-black) 70%);
+    opacity: 0.8;
+    z-index: 0;
+}
+
+.menu-hero-content {
+    z-index: 1;
+    padding: 0 1rem;
+    max-width: 800px;
+}
+
+.menu-hero-content h1 {
+    font-family: "Georgia", serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    color: var(--golden-yellow);
+    text-shadow: 3px 3px 6px var(--dark-shadow);
+    animation: fadeInDown 1s ease-out;
+}
+
+.menu-hero-content p {
+    font-size: 1.5rem;
+    color: var(--off-white);
+    font-style: italic;
+    font-weight: 300;
+    animation: fadeInUp 1s ease-out 0.3s both;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Menu Navigation */
+.menu-nav {
+    padding: 1.5rem 2rem;
+    text-align: center;
+    background: var(--golden-yellow);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 80px;
+    z-index: 100;
+    border-bottom: 3px solid var(--skyline-black);
+}
+
+.menu-tabs {
+    margin-top: 1vh;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.menu-tab {
+    padding: 0.8rem 1.8rem;
+    background: transparent;
+    border: 2px solid var(--skyline-black);
+    border-radius: 50px;
+    color: var(--skyline-black);
+    font-family: "Georgia", serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.menu-tab:hover,
+.menu-tab.active {
+    background: var(--skyline-black);
+    color: var(--golden-yellow);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-color: transparent;
+}
+
+/* Menu Content */
+.menu-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    background: var(--off-white);
+}
+
+.menu-section {
+    display: none;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.menu-section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pizza-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 1rem;
+    margin-top: 0rem;
+}
+
+.pizza-card {
+    background: rgba(212, 160, 23, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    min-height: 120px;
+    border: 2px solid var(--golden-yellow);
+}
+
+.pizza-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    background: rgba(212, 160, 23, 0.15);
+}
+
+.pizza-image {
+    height: 280px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-bottom: 5px solid var(--golden-yellow);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+.pizza-number {
+    background: var(--skyline-black);
+    color: var(--off-white);
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-family: "Georgia", serif;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+}
+
+.pizza-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+}
+
+.pizza-header {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.pizza-name {
+    font-family: "Georgia", serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--golden-yellow);
+    margin-bottom: 0.3rem;
+    line-height: 1.2;
+    text-shadow: 1px 1px 2px var(--dark-shadow);
+}
+
+.pizza-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--golden-yellow);
+    align-self: flex-end;
+    margin-left: auto;
+    text-shadow: 1px 1px 2px var(--dark-shadow);
+}
+
+.newstyle {
+    font-family: "Georgia", serif;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    line-height: 1.4;
+    text-align: center;
+    margin: 25px 0;
+    color: var(--skyline-black);
+}
+
+/* Footer */
+.footer {
+    background: var(--golden-yellow);
+    color: var(--skyline-black);
+    padding: 4rem 2rem 1.5rem;
+    margin-top: 5rem;
+    border-top: 5px solid var(--skyline-black);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2 ව
+
+}
+/* Footer Content */
+.footer-section h3 {
+    margin-bottom: 1.2rem;
+    color: var(--golden-yellow);
+    font-family: "Georgia", serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px var(--dark-shadow);
+}
+
+.footer-section p {
+    margin-bottom: 0.7rem;
+    opacity: 0.9;
+    font-size: 0.95rem;
+    color: var(--skyline-black);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    opacity: 0.7;
+    font-size: 0.85rem;
+    color: var(--skyline-black);
+}
+
+@media screen and (max-width: 980px) {
+  .logo{
+    font-size: 1.5rem;
+  }
+    
+}
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .menu-hero {
+        height: 45vh;
+    }
+
+    .menu-hero-content h1 {
+        font-size: 3.2rem;
+    }
+
+    .menu-hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .pizza-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-nav {
+        padding: 0.5rem;
+    }
+
+    .menu-tabs {
+        align-items: center;
+        gap: 0.7rem;
+    }
+
+    .menu-tab {
+        padding: 0.3rem 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .pizza-card {
+        padding: 0.5rem 1rem;
+    }
+
+    .pizza-grid {
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5rem;
+        gap: 0.4rem;
+    }
+
+    .menu-hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .menu-hero-content p {
+        font-size: 1rem;
+    }
+
+    .pizza-name {
+        font-size: 1.7rem;
+    }
+
+    .pizza-price {
+        font-size: 1.5rem;
+    }
+
+    .pizza-ingredients {
+        font-size: 0.9rem;
+    }
+
+    .order-btn {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    .footer-section h3 {
+        font-size: 1.5rem;
+    }
+}

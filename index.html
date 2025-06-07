@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            padding: 40px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #34495e;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .link-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        a {
+            font-size: 1.1rem;
+            color: #3498db;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        a:hover {
+            background-color: #3498db;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            a {
+                font-size: 1rem;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <h1>Sid typ 1</h1>
+            <div class="link-group">
+                <h2>Sida 1</h2>
+                <a href="site1/index.html">Sida 1</a>
+            </div>
+            <div class="link-group">
+                <h2>Sida 1 v2</h2>
+                <a href="site1copy/index.html">Sida 1 copy</a>
+            </div>
+            <div class="link-group">
+                <h2>Sida 1 v3</h2>
+                <a href="site1copy copy/index.html">Sida 1 copy2</a>
+            </div>
+        </div>
+        <div class="section">
+            <h1>Sid typ 2</h1>
+            <div class="link-group">
+                <h2>Sida 2</h2>
+                <a href="site2/index.html">Sida 2</a>
+            </div>
+            <div class="link-group">
+                <h2>Sida 4</h2>
+                <a href="site4/index.html">Sida 4</a>
+            </div>
+            <div class="link-group">
+                <h2>Sida 5</h2>
+                <a href="site4 copy/index.html">Sida 4</a>
+            </div>
+        </div>
+        <div class="section">
+            <h1>Sid typ 3</h1>
+            <div class="link-group">
+                <h2>Sida 3</h2>
+                <a href="site3/index.html">Sida 3</a>
+            </div>
+        </div>
+
+            <div class="section">
+            <h1>Sid typ 4</h1>
+            <div class="link-group">
+                <h2>Sida något</h2>
+                <a href="site5/index.html">Sida något</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

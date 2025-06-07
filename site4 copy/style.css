@@ -1,0 +1,357 @@
+:root {
+    --golden-yellow: #D4A017; /* From pizza crust */
+    --skyline-black: #000000; /* From skyline silhouette */
+    --off-white: #F5F5F5; /* Softer white for contrast */
+    --pizza-crust: #E6B800; /* Slightly lighter crust shade for accents */
+    --dark-shadow: rgba(0, 0, 0, 0.5); /* For shadows */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Georgia", serif; /* Elegant font to match logo */
+    line-height: 1.6;
+    color: var(--skyline-black);
+    background: linear-gradient(135deg, var(--off-white), var(--pizza-crust)); /* Subtle gradient */
+    min-height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://images.presentationgo.com/2025/04/pepperoni-pizza-closeup.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 30%, var(--skyline-black) 70%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 1rem;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-family: "Georgia", serif;
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--golden-yellow);
+    text-shadow: 3px 3px 6px var(--dark-shadow);
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+    color: var(--off-white);
+    font-weight: 300;
+    font-style: italic;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.mybtn {
+    padding: 1.2rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: "Georgia", serif;
+}
+
+.mybtn-primary {
+    background: var(--golden-yellow);
+    color: var(--skyline-black);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.mybtn-secondary {
+    background: transparent;
+    color: var(--golden-yellow);
+    border: 2px solid var(--golden-yellow);
+}
+
+.mybtn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+.mybtn-secondary:hover {
+    background: var(--golden-yellow);
+    color: var(--skyline-black);
+}
+
+/* Menu Section */
+.menu-categories {
+    padding: 6rem 2rem;
+    background: var(--off-white);
+    position: relative;
+}
+
+.menu-categories::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.section-title {
+    text-align: center;
+    font-family: "Georgia", serif;
+    font-size: 3.5rem;
+    color: var(--skyline-black);
+    margin-bottom: 3rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(212, 160, 23, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.menu-button-container {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.italian-menu-btn {
+    display: inline-block;
+    padding: 1.5rem 4rem;
+    background: var(--golden-yellow);
+    color: var(--skyline-black);
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: "Georgia", serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    border: 3px solid var(--skyline-black);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.italian-menu-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s;
+}
+
+.italian-menu-btn:hover::before {
+    left: 100%;
+}
+
+.italian-menu-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    background: var(--pizza-crust);
+}
+
+.italian-menu-btn::after {
+    content: "🍕";
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+}
+
+.italian-menu-btn:hover::after {
+    transform: translateY(-50%) rotate(360deg);
+}
+
+/* About Section */
+.pizza-hero {
+    padding: 6rem 2rem;
+    background: var(--off-white);
+    color: var(--skyline-black);
+    text-align: center;
+    position: relative;
+}
+
+.pizza-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 30% 70%, rgba(212, 160, 23, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 70% 30%, rgba(212, 160, 23, 0.05) 0%, transparent 50%);
+}
+
+.pizza-content {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.pizza-hero h1 {
+    font-family: "Georgia", serif;
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    color: var(--golden-yellow);
+    text-shadow: 2px 2px 4px var(--dark-shadow);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.pizza-hero p {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    color: var(--skyline-black);
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.kontakt-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.kontakt-info {
+    display: contents;
+}
+
+.kontakt-sektion {
+    background: rgba(212, 160, 23, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid var(--golden-yellow);
+    transition: all 0.3s ease;
+}
+
+.kontakt-sektion:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    background: rgba(212, 160, 23, 0.15);
+}
+
+.kontakt-sektion h3 {
+    font-family: "Georgia", serif;
+    color: var(--golden-yellow);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.kontakt-sektion p {
+    color: var(--skyline-black);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .pizza-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .kontakt-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .mybtn {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
+    .italian-menu-btn {
+        padding: 1.2rem 2.5rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* Remove decorative-flame since it doesn’t fit the logo’s urban pizzeria vibe */

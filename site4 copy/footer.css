@@ -1,0 +1,56 @@
+/* Footer */
+.footer {
+    background: #000000; /* Black to match footer in pizza theme */
+    color: #FFFFFF; /* White for contrast, matching footer text */
+    padding: 4rem 2rem 2rem;
+    border-top: 3px solid #D4A017; /* Golden yellow border */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1.5rem;
+    color: #D4A017; /* Golden yellow for emphasis */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Playful pizza theme font */
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Matches hero text-shadow */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-section p {
+    margin-bottom: 0.8rem;
+    color: #FFFFFF; /* White for readability */
+    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.footer-section a {
+    color: #D4A017; /* Golden yellow links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.footer-section a:hover {
+    color: #B88C14; /* Slightly darker golden yellow, matching cta-button hover */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(212, 160, 23, 0.3); /* Golden yellow with opacity */
+    color: #FFFFFF; /* White for consistency */
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
