@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bella Vista Pizza</title>
+    <title>Mario's Pizza Palace - Authentic Italian Pizza</title>
     <style>
         * {
             margin: 0;
@@ -14,8 +14,8 @@
         body {
             font-family: 'Georgia', serif;
             line-height: 1.6;
-            color: #2c1810;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #333;
+            background: #fff;
         }
 
         .container {
@@ -24,29 +24,27 @@
             padding: 0 20px;
         }
 
-        /* Header & Navigation */
+        /* Header */
         header {
-            background: rgba(0, 0, 0, 0.95);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            width: 100%;
+            background: linear-gradient(135deg, #d32f2f, #f44336);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            position: sticky;
             top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            z-index: 100;
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 0;
         }
 
         .logo {
             font-size: 2rem;
             font-weight: bold;
-            color: #ff6b35;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         .nav-links {
@@ -55,149 +53,77 @@
             gap: 2rem;
         }
 
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: #ff6b35;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-
         .nav-links a {
-            color: #fff;
+            color: white;
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
-            position: relative;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
         }
 
         .nav-links a:hover {
-            color: #ff6b35;
+            background: rgba(255,255,255,0.2);
             transform: translateY(-2px);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background: #ff6b35;
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
         }
 
         /* Hero Section */
         .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23d2691e" width="1200" height="800"/><circle fill="%23ff6b35" cx="200" cy="200" r="80" opacity="0.1"/><circle fill="%23ff6b35" cx="800" cy="300" r="120" opacity="0.1"/><circle fill="%23ff6b35" cx="1000" cy="600" r="100" opacity="0.1"/></svg>');
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23ff6b35" width="1200" height="600"/><circle fill="%23fff" cx="600" cy="300" r="150" opacity="0.1"/><circle fill="%23d32f2f" cx="300" cy="150" r="80" opacity="0.3"/><circle fill="%234caf50" cx="900" cy="450" r="60" opacity="0.3"/></svg>');
             background-size: cover;
             background-position: center;
+            height: 80vh;
             display: flex;
             align-items: center;
-            justify-content: center;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 30% 70%, rgba(255, 107, 53, 0.2) 0%, transparent 50%);
-            animation: pulse 4s ease-in-out infinite alternate;
-        }
-
-        @keyframes pulse {
-            0% { opacity: 0.5; }
-            100% { opacity: 1; }
-        }
-
-        .hero-content {
             color: white;
-            z-index: 2;
-            position: relative;
         }
 
-        .hero h1 {
+        .hero-content h1 {
             font-size: 4rem;
             margin-bottom: 1rem;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
             animation: fadeInUp 1s ease-out;
         }
 
-        .hero p {
+        .hero-content p {
             font-size: 1.5rem;
             margin-bottom: 2rem;
-            opacity: 0.9;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
             animation: fadeInUp 1s ease-out 0.3s both;
         }
 
         .cta-button {
-            display: inline-block;
-            background: linear-gradient(45deg, #ff6b35, #ff8c42);
+            background: linear-gradient(45deg, #4caf50, #66bb6a);
             color: white;
-            padding: 15px 40px;
+            padding: 1rem 2rem;
             text-decoration: none;
             border-radius: 50px;
+            font-size: 1.2rem;
             font-weight: bold;
-            font-size: 1.1rem;
+            display: inline-block;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
             animation: fadeInUp 1s ease-out 0.6s both;
         }
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(255, 107, 53, 0.4);
-            background: linear-gradient(45deg, #ff8c42, #ff6b35);
+            box-shadow: 0 8px 25px rgba(76, 175, 80, 0.6);
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Sections */
-        .section {
-            padding: 80px 0;
-            min-height: 100vh;
-            display: none;
-        }
-
-        .section.active {
-            display: block;
+        /* Menu Section */
+        .menu {
+            padding: 5rem 0;
+            background: #f8f9fa;
         }
 
         .section-title {
             text-align: center;
             font-size: 3rem;
             margin-bottom: 3rem;
-            color: #ff6b35;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Menu Section */
-        #menu {
-            background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
-            color: white;
+            color: #d32f2f;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
 
         .menu-grid {
@@ -208,381 +134,433 @@
         }
 
         .menu-item {
-            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 140, 66, 0.05));
+            background: white;
             padding: 2rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 107, 53, 0.2);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
+            border: 3px solid transparent;
         }
 
         .menu-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.2);
-            border-color: rgba(255, 107, 53, 0.4);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            border-color: #d32f2f;
         }
 
         .menu-item h3 {
-            color: #ff6b35;
+            color: #d32f2f;
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
 
         .menu-item .price {
-            color: #ff8c42;
+            font-size: 1.3rem;
             font-weight: bold;
-            font-size: 1.2rem;
+            color: #4caf50;
             float: right;
         }
 
-        .menu-item p {
-            color: #ccc;
-            line-height: 1.6;
+        /* About Section */
+        .about {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            background: linear-gradient(45deg, #ff6b35, #d32f2f);
+            height: 300px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         /* Contact Section */
-        #contact {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        .contact {
+            padding: 5rem 0;
+            background: #1a1a1a;
             color: white;
         }
 
-        .contact-grid {
+        .contact-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: 1fr 1fr;
             gap: 3rem;
-            margin-top: 2rem;
         }
 
-        .contact-card {
-            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 140, 66, 0.05));
-            padding: 2.5rem;
-            border-radius: 20px;
-            text-align: center;
-            border: 1px solid rgba(255, 107, 53, 0.2);
-            transition: all 0.3s ease;
+        .contact-form {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
             backdrop-filter: blur(10px);
         }
 
-        .contact-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.2);
+        .form-group {
+            margin-bottom: 1.5rem;
         }
 
-        .contact-icon {
-            font-size: 3rem;
-            color: #ff6b35;
-            margin-bottom: 1rem;
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
         }
 
-        .contact-card h3 {
-            color: #ff6b35;
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.9);
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: linear-gradient(45deg, #d32f2f, #f44336);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(211, 47, 47, 0.4);
+        }
+
+        .contact-info h3 {
+            color: #f44336;
             margin-bottom: 1rem;
             font-size: 1.5rem;
         }
 
-        .contact-card p {
-            color: #ccc;
-            line-height: 1.6;
+        .contact-info p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
-            .container {
-                padding: 0 15px;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-
             .nav-links {
-                position: fixed;
-                top: 70px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 70px);
-                background: rgba(0, 0, 0, 0.95);
-                backdrop-filter: blur(10px);
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: center;
-                gap: 2rem;
-                padding-top: 3rem;
-                transition: left 0.3s ease;
+                display: none;
             }
-
-            .nav-links.active {
-                left: 0;
-            }
-
-            .nav-links a {
-                font-size: 1.2rem;
-                padding: 1rem;
-                border-bottom: 1px solid rgba(255, 107, 53, 0.2);
-                width: 80%;
-                text-align: center;
-            }
-
-            .hero {
-                height: 100vh;
-                padding: 0 20px;
-            }
-
-            .hero h1 {
+            
+            .hero-content h1 {
                 font-size: 2.5rem;
-                margin-bottom: 0.5rem;
             }
-
-            .hero p {
-                font-size: 1.1rem;
-                margin-bottom: 1.5rem;
+            
+            .hero-content p {
+                font-size: 1.2rem;
             }
-
-            .cta-button {
-                padding: 12px 30px;
-                font-size: 1rem;
+            
+            .about-content {
+                grid-template-columns: 1fr;
             }
-
-            .section {
-                padding: 60px 0;
+            
+            .contact-content {
+                grid-template-columns: 1fr;
             }
-
-            .section-title {
-                font-size: 2.2rem;
-                margin-bottom: 2rem;
-            }
-
+            
             .menu-grid {
                 grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .menu-item {
-                padding: 1.5rem;
-            }
-
-            .menu-item h3 {
-                font-size: 1.3rem;
-                margin-bottom: 0.5rem;
-            }
-
-            .menu-item .price {
-                font-size: 1.1rem;
-                display: block;
-                float: none;
-                margin: 0.5rem 0;
-                text-align: left;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .contact-card {
-                padding: 2rem;
-            }
-
-            .contact-icon {
-                font-size: 2.5rem;
             }
         }
 
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-
-            .menu-item {
-                padding: 1.2rem;
-            }
-
-            .contact-card {
-                padding: 1.5rem;
-            }
-
-            .logo {
-                font-size: 1.5rem;
-            }
+        /* Order Button Animation */
+        .order-btn {
+            background: linear-gradient(45deg, #ff6b35, #ff8a65);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
         }
+
+        .order-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+        }
+
+      
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <nav class="container">
-            <div class="logo">🍕 Bella Vista Pizza</div>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#" onclick="showSection('home'); closeMobileMenu()">Home</a></li>
-                <li><a href="#" onclick="showSection('menu'); closeMobileMenu()">Menu</a></li>
-                <li><a href="#" onclick="showSection('contact'); closeMobileMenu()">Contact</a></li>
+            <div class="logo">🍕 Mario's Pizza Palace</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#order" class="cta-button">Order Now</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Authentic Italian Pizza</h1>
-            <p>Fresh ingredients, traditional recipes, unforgettable taste</p>
-            <a href="#" onclick="showSection('menu')" class="cta-button">View Our Menu</a>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Authentic Italian Pizza</h1>
+                <p>Made with love, served with passion since 1952</p>
+                <a href="#menu" class="cta-button">View Our Menu</a>
+            </div>
         </div>
     </section>
 
+   
+
     <!-- Menu Section -->
-    <section id="menu" class="section">
+    <section id="menu" class="menu">
         <div class="container">
-            <h2 class="section-title">Our Delicious Menu</h2>
+            <h2 class="section-title">Our Signature Pizzas</h2>
             <div class="menu-grid">
                 <div class="menu-item">
-                    <h3>Margherita Classic</h3>
-                    <span class="price">$18</span>
-                    <p>Fresh mozzarella, San Marzano tomatoes, fresh basil, extra virgin olive oil on our signature wood-fired crust.</p>
+                    <h3>🍕 Margherita Classic</h3>
+                    <p>Fresh mozzarella, basil, San Marzano tomatoes, extra virgin olive oil on our hand-tossed dough</p>
+                    <span class="price">$16.99</span>
+                    <a href="#order" class="order-btn">Order Now</a>
                 </div>
-                
                 <div class="menu-item">
-                    <h3>Pepperoni Supreme</h3>
-                    <span class="price">$22</span>
-                    <p>Premium pepperoni, mozzarella cheese, rich tomato sauce with a hint of oregano and garlic.</p>
+                    <h3>🍖 Meat Lovers Supreme</h3>
+                    <p>Pepperoni, Italian sausage, ham, bacon, ground beef with mozzarella and cheddar cheese</p>
+                    <span class="price">$22.99</span>
+                    <a href="#order" class="order-btn">Order Now</a>
                 </div>
-                
                 <div class="menu-item">
-                    <h3>Quattro Stagioni</h3>
-                    <span class="price">$25</span>
-                    <p>Artichokes, mushrooms, ham, olives, and mozzarella representing the four seasons of Italy.</p>
+                    <h3>🌿 Veggie Garden Delight</h3>
+                    <p>Bell peppers, mushrooms, red onions, black olives, fresh tomatoes, spinach, feta cheese</p>
+                    <span class="price">$19.99</span>
+                    <a href="#order" class="order-btn">Order Now</a>
                 </div>
-                
                 <div class="menu-item">
-                    <h3>Prosciutto & Arugula</h3>
-                    <span class="price">$26</span>
-                    <p>Thin slices of prosciutto di Parma, fresh arugula, cherry tomatoes, and aged parmesan.</p>
+                    <h3>🔥 Spicy Diavola</h3>
+                    <p>Spicy salami, hot peppers, red onions, mozzarella, finished with chili oil and fresh oregano</p>
+                    <span class="price">$20.99</span>
+                    <a href="#order" class="order-btn">Order Now</a>
                 </div>
-                
                 <div class="menu-item">
-                    <h3>Vegetarian Delight</h3>
-                    <span class="price">$20</span>
-                    <p>Bell peppers, red onions, mushrooms, olives, cherry tomatoes, and fresh mozzarella.</p>
+                    <h3>🍄 Truffle Mushroom</h3>
+                    <p>Wild mushrooms, truffle oil, ricotta, mozzarella, arugula, balsamic glaze</p>
+                    <span class="price">$24.99</span>
+                    <a href="#order" class="order-btn">Order Now</a>
                 </div>
-                
                 <div class="menu-item">
-                    <h3>Meat Lovers</h3>
-                    <span class="price">$28</span>
-                    <p>Pepperoni, Italian sausage, ham, bacon, and mozzarella on our signature tomato base.</p>
+                    <h3>🍍 Hawaiian Paradise</h3>
+                    <p>Ham, pineapple, mozzarella cheese, BBQ sauce drizzle on our signature crust</p>
+                    <span class="price">$18.99</span>
+                    <a href="#order" class="order-btn">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Our Story</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Welcome to Mario's Pizza Palace, where tradition meets taste! Since 1952, our family has been crafting authentic Italian pizzas using recipes passed down through three generations.</p>
+                    
+                    <p>We source our ingredients directly from Italy - San Marzano tomatoes, fresh mozzarella, and the finest olive oil. Our dough is made fresh daily and hand-tossed to perfection by our master pizza makers.</p>
+                    
+                    <p>What started as a small neighborhood pizzeria has grown into a beloved local institution, but we've never forgotten our roots. Every pizza that leaves our kitchen carries the same passion and attention to detail that Nonna Maria put into her very first pie.</p>
+                    
+                    <p>Come taste the difference that three generations of pizza-making expertise makes!</p>
+                </div>
+                <div class="about-image">
+                    🏛️ Est. 1952<br>Family Tradition
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
+    <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon">📍</div>
-                    <h3>Visit Us</h3>
-                    <p>123 Main Street<br>
-                    Downtown District<br>
-                    Your City, State 12345</p>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <h3>Send us a message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Let us know how we can help you!" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
                 </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">📞</div>
-                    <h3>Call Us</h3>
-                    <p>Phone: (555) 123-4567<br>
-                    Open Daily: 11:00 AM - 10:00 PM<br>
-                    Friday & Saturday until 11:00 PM</p>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">✉️</div>
-                    <h3>Email Us</h3>
-                    <p>info@bellavistapizza.com<br>
-                    orders@bellavistapizza.com<br>
-                    We reply within 24 hours</p>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">🚚</div>
-                    <h3>Delivery</h3>
-                    <p>Free delivery within 5 miles<br>
-                    Delivery time: 30-45 minutes<br>
-                    Minimum order: $15</p>
+                <div class="contact-info">
+                    <h3>📍 Visit Us</h3>
+                    <p><strong>Address:</strong><br>123 Little Italy Street<br>New York, NY 10013</p>
+                    
+                    <h3>📞 Call Us</h3>
+                    <p><strong>Phone:</strong> (555) 123-PIZZA<br><strong>Delivery:</strong> (555) 123-4567</p>
+                    
+                    <h3>🕒 Hours</h3>
+                    <p><strong>Mon-Thu:</strong> 11am - 10pm<br><strong>Fri-Sat:</strong> 11am - 11pm<br><strong>Sunday:</strong> 12pm - 9pm</p>
+                    
+                    
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mario's Pizza Palace. All rights reserved. | Follow us on social media for daily specials!</p>
+            <p>🍕 Made with ❤️ in Little Italy</p>
+        </div>
+    </footer>
+
     <script>
-        function showSection(sectionName) {
-            // Hide all sections
-            const sections = document.querySelectorAll('.section, .hero');
-            sections.forEach(section => {
-                section.style.display = 'none';
-                section.classList.remove('active');
-            });
-            
-            // Show the selected section
-            if (sectionName === 'home') {
-                document.querySelector('.hero').style.display = 'flex';
-            } else {
-                const targetSection = document.getElementById(sectionName);
-                if (targetSection) {
-                    targetSection.style.display = 'block';
-                    targetSection.classList.add('active');
-                }
-            }
-            
-            // Update navigation active state
-            const navLinks = document.querySelectorAll('.nav-links a');
-            navLinks.forEach(link => {
-                link.style.color = '#fff';
-            });
-            
-            // Scroll to top
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // Initialize - show home by default
-        document.addEventListener('DOMContentLoaded', function() {
-            showSection('home');
-        });
-
-        // Mobile menu functions
-        function toggleMobileMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        }
-
-        function closeMobileMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.remove('active');
-        }
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const nav = document.querySelector('nav');
-            const mobileBtn = document.querySelector('.mobile-menu-btn');
-            const navLinks = document.getElementById('navLinks');
-            
-            if (!nav.contains(event.target) && navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-            }
-        });
-
-        // Smooth scrolling and navigation effects
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', function(e) {
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
+        });
+
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const phone = formData.get('phone');
+            const message = formData.get('message');
+            
+            // Simple validation
+            if (!name || !email || !message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Show loading state
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            // Send form data to PHP handler
+            fetch('contact_handler.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    alert(`Thank you ${name}! Your message has been sent successfully.`);
+                    this.reset();
+                } else {
+                    alert('Sorry, there was an error sending your message. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Sorry, there was an error sending your message. Please try again.');
+            })
+            .finally(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
+        });
+
+      
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Apply observer to menu items
+        document.querySelectorAll('.menu-item').forEach((item, index) => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(50px)';
+            item.style.transition = `all 0.6s ease ${index * 0.1}s`;
+            observer.observe(item);
         });
     </script>
 </body>

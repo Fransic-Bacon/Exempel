@@ -233,6 +233,138 @@ header {
   margin-bottom: 0.5rem;
 }
 
+
+
+
+
+
+
+/* Contact Section */
+.contact-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    background: var(--off-white);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.contact-content:hover {
+    transform: translateY(-5px);
+}
+
+.contact-form h3,
+.contact-info h3 {
+    font-family: "Comic Sans MS", sans-serif;
+    font-size: 1.8rem;
+    color: var(--golden-yellow);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.contact-form {
+    padding: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-family: "Comic Sans MS", sans-serif;
+    font-weight: bold;
+    color: var(--skyline-black);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--golden-yellow);
+    border-radius: 5px;
+    font-family: "Comic Sans MS", sans-serif;
+    font-size: 1rem;
+    color: var(--skyline-black);
+   
+
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--pizza-crust);
+  
+    box-shadow: 0 0 8px rgba(212, 160, 23, 0.3);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-family: "Comic Sans MS", sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: var(--golden-yellow);
+    color: var(--skyline-black);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.submit-btn:hover {
+    background: var(--pizza-crust);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .contact-form,
+    .contact-info {
+        padding: 1rem;
+    }
+
+    .contact-form h3,
+    .contact-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .form-group label {
+        font-size: 1rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.9rem;
+    }
+
+    .submit-btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+
+
+
+
 .contact-info {
   margin-top: 2rem;
   font-size: 1.1rem;
